@@ -121,13 +121,12 @@ xlabel('time -->');
 ylabel('amplitude -->');
 title('multiplication');</pre>
     </div>
-     <div class="card">
+    <div class="card">
       <div class="card-head">
         <h2>Experiment 2</h2>
         <button class="btn">Copy Code</button>
       </div>
-      <pre id="exp2">
-        EXPERIMENT 2
+      <pre id="exp2">EXPERIMENT 2
 Write a MATLAB program to generate two sinusoidal signals using the equation:
 y(t) = sin(2πft)
 where the frequencies are f₁ = 2 Hz and f₂ = 10 Hz. Consider the time range from t = 0 to t = 1 seconds with a step size of 0.01.
@@ -165,8 +164,7 @@ function [a,s,m] = process(y1,y2)
 a=y1+y2;
 s=y1-y2;
 m=y1.*y2;
-end
-      </pre>
+end</pre>
     </div>
 
 
@@ -376,5 +374,31 @@ end
 display(X);</pre>
     </div>
   </div>
+
+  <script>
+    document.querySelectorAll('.card').forEach((card) => {
+      const button = card.querySelector('button.btn');
+      const codeBlock = card.querySelector('pre');
+
+      if (!button || !codeBlock) {
+        return;
+      }
+
+      button.addEventListener('click', async () => {
+        const originalText = button.textContent;
+
+        try {
+          await navigator.clipboard.writeText(codeBlock.innerText.trim());
+          button.textContent = 'Copied';
+        } catch (error) {
+          button.textContent = 'Copy failed';
+        }
+
+        setTimeout(() => {
+          button.textContent = originalText;
+        }, 1000);
+      });
+    });
+  </script>
 </body>
 </html>
