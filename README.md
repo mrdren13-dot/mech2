@@ -1,16 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MECH2 Notes</title>
+
 <style>
-body{
+*{
     margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-h1{
-    text-align:center;
-    padding:10px;
+body{
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+}
+
+.header{
     background:#2a5298;
     color:white;
-    margin:0;
+    text-align:center;
+    padding:15px;
+    font-size:24px;
+    font-weight:bold;
 }
 
 iframe{
@@ -20,11 +33,15 @@ iframe{
 }
 </style>
 </head>
+
 <body>
 
-<h1>MECH2</h1>
+<div class="header">MECH2</div>
 
-<iframe src="MATLAB%20Experiments%20PPT-1%20(1).pdf"></iframe>
+<iframe
+src="https://drive.google.com/file/d/1eEyApA5muVVb2WbZEjWniTMnq_WJjG22/preview"
+allow="autoplay">
+</iframe>
 
 </body>
 </html>
